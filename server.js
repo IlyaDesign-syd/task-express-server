@@ -1,9 +1,12 @@
 const express = require('express')
 const app = express()
 
-app.listen(3000)
 
 app.get('/', (req, res) => {
-  res.status(500).json({message: "Error"})
   res.send('Hello World!')
-} )
+})
+
+const userRouter = require('./routes/users')
+app.use('/users', userRouter);
+
+app.listen(3000)
