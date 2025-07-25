@@ -1,8 +1,6 @@
 import mongoose, { Document, Model } from 'mongoose';
 import { UserSchema } from '../types/User.types';
 
-type UserDocument = UserSchema & Document;
-
 const userSchema = new mongoose.Schema({
   auth0Id: { type: String, required: true, unique: true },
   email: { type: String, required: true, unique: true },

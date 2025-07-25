@@ -11,6 +11,12 @@ export interface UserResponse {
 }
 
 export interface UserRequest {
+  email?: string;
+  firstName?: string;
+  lastName?: string;
+}
+
+export interface AuthenticatedRequest {
   auth?: { payload?: Auth0Payload };
 }
 
