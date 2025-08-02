@@ -1,10 +1,10 @@
 import { Response, Request } from "express";
 import {
-  AuthenticatedRequest,
   UserRequest,
   UserResponse,
 } from "../types/User.types";
 import { User } from "../models/User.model";
+import { AuthenticatedRequest } from "../types/Token";
 const express = require("express");
 const userRouter = express.Router();
 const jwtCheck = require("../middleware/checkToken");

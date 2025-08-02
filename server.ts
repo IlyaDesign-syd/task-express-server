@@ -5,7 +5,7 @@ import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
 import userRouter from "./routes/User.router";
-
+import projectRouter from "./routes/Project.router";
 
 const app = express();
 
@@ -19,6 +19,7 @@ mongoose
 
 app.use(express.json());
 app.use("/users", userRouter);
+app.use("/projects", projectRouter);
 
 // CORS setup for local development
 app.use(

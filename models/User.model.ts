@@ -1,5 +1,4 @@
-import mongoose, { Document, Model } from 'mongoose';
-import { UserSchema } from '../types/User.types';
+import mongoose from 'mongoose';
 
 const userSchema = new mongoose.Schema({
   auth0Id: { type: String, required: true, unique: true },
@@ -10,5 +9,5 @@ const userSchema = new mongoose.Schema({
   updatedAt: { type: Date, default: Date.now },
 }, { timestamps: true });
 
-export const User = mongoose.model('User', userSchema);
+export const User = mongoose.model('users', userSchema);
 

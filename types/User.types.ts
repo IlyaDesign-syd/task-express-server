@@ -1,4 +1,3 @@
-import { Auth0Payload } from "./Token";
 
 export interface UserResponse {
   isUserRegistered: boolean;
@@ -14,10 +13,6 @@ export interface UserRequest {
   email?: string;
   firstName?: string;
   lastName?: string;
-}
-
-export interface AuthenticatedRequest {
-  auth?: { payload?: Auth0Payload };
 }
 
 export interface UserSchema {
